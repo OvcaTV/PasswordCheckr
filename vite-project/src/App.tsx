@@ -4,6 +4,7 @@ import PasswordStrength from './assets/PasswordStrength';
 import CharacterSequenceValidator from './assets/CharacterSequenceValidator';
 import PasswordTimeValidator from './assets/PasswordTimeValidator';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import CountryValidator from './assets/CountryValidator';
 
 export default function App() {
     const [password, setPassword] = useState('');
@@ -23,6 +24,7 @@ export default function App() {
             <PasswordStrength password={password}/>
             <CharacterSequenceValidator password={password}/>
             <PasswordTimeValidator password={password} passwordStartTime={passwordStartTime}/>
+            <CountryValidator password={password} />
         </div>
     );
 };
